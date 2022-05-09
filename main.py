@@ -1,10 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
-# import random
-# import cv2
 import pyautogui
 import time
-# import txt
+from gradient_descent import gradient_descent
+from problemclass import Problem
 
 def main():
     # first generate racing line here using
@@ -16,10 +15,17 @@ def main():
             xs.append(int(newline[1].split(',')[0]))
             ys.append(int(newline[-1][:-2]))
             
-    print('xs: ' + str(xs))
-    print('ys: ' + str(ys))
+    # print('xs: ' + str(xs))
+    # print('ys: ' + str(ys))
     # plt.plot(xs,ys)
     # plt.show()
+    problem = Problem()
+    GD = gradient_descent(0.9,problem)
+    newxs, newys = GD.minimize(xs, ys, 1)
+    plt.plot(newxs,newys)
+    plt.plot(xs,ys)
+    plt.show()
+    
     
 
 if __name__ == "__main__":

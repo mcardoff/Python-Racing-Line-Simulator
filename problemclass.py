@@ -1,15 +1,23 @@
 import numpy as np
+import math
 
 from racinglineconstraint import Racing_Line_Constraint
+
 class Problem:
     def __init__(self):
-        self.epsilon = 1e-8
+        self.epsilon = 0.1
         self.batch_num = 5
         self.constraint = Racing_Line_Constraint()
 
     def perturbed_param(self,retval, xs, ys, i):
-        costval = self.cost_fun(xs, ys)
-        retval = costval        
+        costval = self.constraint.cost_fun(xs, ys)
+        if isinstance(costval,float):
+            retval = costval
+        else:
+            retval = 0.0
+        for val in self.constraint.constraint_vals(xs, ys, i):
+            if isinstance(val,float):
+                retval += val
 
     def gradient(self, grad_x, grad_y, xs, ys):
         pf_x, pf_y = 0.0, 0.0

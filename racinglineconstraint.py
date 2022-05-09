@@ -34,7 +34,7 @@ class Racing_Line_Constraint:
         return kval - self.KMAX
 
     def friction_constraint(self,xs,ys,i):
-        k = curvatureVal(xs, ys, i)
+        k = self.curvature_val(xs, ys, i)
         mug = 9.8
         vsq = k / mug
         return abs(k * vsq - mug)
