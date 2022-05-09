@@ -1,5 +1,6 @@
 import numpy as np
 
+from racinglineconstraint import Racing_Line_Constraint
 class Problem:
     def __init__(self):
         self.epsilon = 1e-8
