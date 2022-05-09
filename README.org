@@ -1,0 +1,2 @@
+* Racing Line Simulator in Python
+I wanted to remake [[https://github.com/mcardoff/Racing_Line_Optimizer][the Swift version]] of this project in python, to see if it was any more difficult to do.
