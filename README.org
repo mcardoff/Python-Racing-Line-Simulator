@@ -1,4 +1,14 @@
 * Racing Line Simulator in Python
 I wanted to remake [[https://github.com/mcardoff/Racing_Line_Optimizer][the Swift version]] of this project in python, to see if it was any more difficult to do.
 
-The same class structure is implemented, however there is also a clear difference in the fact that there is no UI in this version, hopefully this will change in the near future!
+The same class structure and methodology is implemented, however there is also a clear difference in the fact that there is no UI in this version, hopefully this will change in the near future!
+
+** Running
+If you have multiple =python= versions installed you may need to run 
+#+begin_example
+python3 main.py
+#+end_example
+But if =python= 3 is the only version you have, the following should work fine:
+#+begin_example
+python main.py
+#+end_example
