@@ -18,8 +18,8 @@ def main():
             
     print('xs: ' + str(xs))
     print('ys: ' + str(ys))
-    plt.plot(xs,ys)
-    plt.show()
+    # plt.plot(xs,ys)
+    # plt.show()
     
 
 if __name__ == "__main__":
